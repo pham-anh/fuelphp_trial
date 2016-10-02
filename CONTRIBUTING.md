@@ -26,7 +26,7 @@ git clone git@gitlab.com:pham-anh/payment_system.git
 # Output: Identity added: link/to/your/ssh_private_key
 ```
 
-##### Clone the project
+#### Clone the project
 
 * Now clone the project to you web directory (`htdocs`)
 
@@ -34,7 +34,7 @@ git clone git@gitlab.com:pham-anh/payment_system.git
 $ git clone git@gitlab.com:pham-anh/payment_system.git
 ```
 
-##### Install dependencies
+#### Install dependencies
 
 * Access the project via the browser, if you see this message    
 `No composer autoloader found. Please run composer to install the FuelPHP framework dependencies first!`    
@@ -45,7 +45,7 @@ $ cd <to_the_project>
 $ php composer.phar install # This will install the dependencies of FuelPHP so the project will run after that
 ```
 
-##### Set up databse
+#### Set up databse
 
 
 
