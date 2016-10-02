@@ -1,12 +1,27 @@
 # Payment System
 
+### Before you get into this project
+
+#### Project overview
+
+Please checkout [readme.md](https://gitlab.com/pham-anh/payment_system/blob/develop/README.md)
+
+#### Coding rules
+
+Please follows [Fuel Coding Standards](http://fuelphp.com/docs/general/coding_standards.html)
+
+#### Branches
+
+* `develop`: for development. Please create new branch from this. Every code into this branch requires a merge request.
+
+* `master`: the branch for mature code that is decided to be released.
+
 ### You need the followings to get into this project
 
 * Know working with Git
 * Have `git bash` (command line interface) or `git GUI` (such as SourceTree) on your PC
-* If you want to you ssh connection, you need to setup `ssh keys` to have gitlab and your PC know each other
 
-### How to set up this project locally
+### How to set up this project locally (in your PC)
 
 Suppose that you are using XAMPP, the followings will show you how to setup this project on your PC via `git bash`
 
@@ -34,9 +49,21 @@ git clone git@gitlab.com:pham-anh/payment_system.git
 $ git clone git@gitlab.com:pham-anh/payment_system.git
 ```
 
+#### Set up database
+
+The development database information is logged in this file
+ * fuel/app/config/development/db.php
+
+The file is set with the following information:
+* Database: `payment_system`
+* Database user: `web_user` and password: `web_user`
+
+You can set up a database and user like that to use.    
+_(For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`)_
+
 #### Install dependencies
 
-* Access the project via the browser, if you see this message    
+* Access the project via the browser, if you see the message    
 `No composer autoloader found. Please run composer to install the FuelPHP framework dependencies first!`    
 then go to shell of your XAMMP and run the following line
 
@@ -45,8 +72,4 @@ $ cd <to_the_project>
 $ php composer.phar install # This will install the dependencies of FuelPHP so the project will run after that
 ```
 
-#### Set up databse
-
-
-
-
+#### Run migration to create/ update tables/ columns
