@@ -1,22 +1,20 @@
 # Payment System
 
-### Before you get into this project
-
-#### Project overview
+### Project overview
 
 Please checkout [readme.md](https://gitlab.com/pham-anh/payment_system/blob/develop/README.md)
 
-#### Coding rules
+### Coding rules
 
 Please follows [Fuel Coding Standards](http://fuelphp.com/docs/general/coding_standards.html)
 
-#### Branches
+### Branches
 
 * `develop`: for development. Please create new branch from this. Every code into this branch requires a merge request.
 
 * `master`: the branch for mature code that is decided to be released.
 
-### You need the followings to get into this project
+### You need the followings
 
 * Know working with Git
 * Have `git bash` (command line interface) or `git GUI` (such as SourceTree) on your PC
@@ -63,7 +61,7 @@ _(For security reason, it is supposed that `web_user` just has very basic previl
 
 #### Install dependencies
 
-* Access the project via the browser, if you see the message    
+Access the project via the browser, if you see the message    
 `No composer autoloader found. Please run composer to install the FuelPHP framework dependencies first!`    
 then go to shell of your XAMMP and run the following line
 
