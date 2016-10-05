@@ -14,11 +14,6 @@ Please follows [Fuel Coding Standards](http://fuelphp.com/docs/general/coding_st
 
 * `master`: the branch for mature code that is decided to be released.
 
-### You need the followings
-
-* Know working with Git
-* Have `git bash` (command line interface) or `git GUI` (such as SourceTree) on your PC
-
 ### How to set up this project locally (in your PC)
 
 Suppose that you are using XAMPP, the followings will show you how to setup this project on your PC via `git bash`
@@ -49,15 +44,15 @@ $ git clone git@gitlab.com:pham-anh/payment_system.git
 
 #### Set up database
 
-The development database information is logged in this file
- * fuel/app/config/development/db.php
-
-The file is set with the following information:
 * Database: `payment_system`
-* Database user: `web_user` and password: `web_user`
-
-You can set up a database and user like that to use.    
+* User for app:
+ * Db user: `web_user` and password: `web_user`
 _(For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`)_
+* User for migrations:
+ * Db user: `system_user` and password: `system_user`
+_(You should grant all previlliges for `system_user` on db `payment_system`)_
+
+This is default information of this project, if you want to use something other, please configure also information in this file: `fuel/app/config/development/db.php`
 
 #### Install dependencies
 
