@@ -44,6 +44,12 @@ return array(
 	'folder' => 'migrations/',
 
 	/*
+	| Configuration name of database connection to use to write migrations
+	|
+	 */
+	'connection' => 'migrations',
+
+	/*
 	| Table name
 	|
 	|	Default: 'migration'
