@@ -23,8 +23,6 @@ Suppose that you are using XAMPP, the followings will show you how to setup this
 * Firstly, you should create an ssh key to make the connection from your `git bash` to `gitlab` more convenient and secure
  * Checkout this link for instruction about SSH key: https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html
           
-_(You can also use HTTPS instead of SSH if you like, but it seems that you will need to enter your `gitlab` password everytime you want to interact with remote repo)_
-
 * After you add the public ssh key to gitlab, add the private key to your git bash
 
 ```shell
@@ -46,11 +44,11 @@ $ git clone git@gitlab.com:pham-anh/payment_system.git
 
 * Database: `payment_system`
 * User for app:
- * Db user: `web_user` and password: `web_user`
-_(For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`)_
+ * Db user: `web_user` and password: `web_user`   
+(For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`)
 * User for migrations:
  * Db user: `system_user` and password: `system_user`
-_(You should grant all previlliges for `system_user` on db `payment_system`)_
+(You should grant all previlliges for `system_user` on db `payment_system`)
 
 This is default information of this project, if you want to use something other, please configure also information in this file: `fuel/app/config/development/db.php`
 
