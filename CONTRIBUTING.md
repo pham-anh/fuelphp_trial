@@ -42,23 +42,19 @@ $ git clone git@gitlab.com:pham-anh/payment_system.git
 
 #### Set up database
 
-Create the followings:
-
 You can start right away with the following default information.
 
 * Database: `payment_system`
-* User for app:
- * Db user: `web_user` and password: `web_user`   
-(For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`)
-* User for migrations:
- * Db user: `system_user` and password: `system_user`
-(You should grant all previlliges for `system_user` on db `payment_system`)
+* Db user for app: `web_user` and password: `web_user`   
+ * For security reason, it is supposed that `web_user` just has very basic previlleges to the database like: `select`, `insert`, `delete`, `update`
+* Db user for migrations: `system_user` and password: `system_user`
+ * You should grant all previlliges for `system_user` on db `payment_system`
 
 #### Install dependencies
 
-Access the project via the browser, if you see the message    
+Access the project via the browser via the URL `localhost/payment_system/public`, if you see the message    
 `No composer autoloader found. Please run composer to install the FuelPHP framework dependencies first!`    
-then go to shell of your XAMMP and run the following line
+then go to shell of your XAMPP and run the following line
 
 ```shell
 $ cd <to_the_project>
@@ -67,11 +63,11 @@ $ php composer.phar install # This will install the dependencies of FuelPHP so t
 
 #### Run migration to create/ update tables/ columns
 
-Open XAMPP shell, change to `payment_system` project, run this command:
+Open XAMPP shell, change directory to `payment_system` project, run this command:
 
 ```shell
 php oil refine migrate
-``
+```
 
 Then you will have the latest database for this system.
 
