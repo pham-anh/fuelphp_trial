@@ -8,15 +8,15 @@
 return array(
 
 	/**
-	 * Base PDO config
+	 * Database connection configuration for migrations
 	 */
-	'default' => array(
+	'migrations' => array(
 		'type'        => 'pdo',
 		'connection'  => array(
-			'dsn'        => '',
+			'dsn'        => 'mysql:host=localhost;dbname=payment_system',
 			'hostname'   => '',
-			'username'   => null,
-			'password'   => null,
+			'username'   => 'system_user',
+			'password'   => 'system_user',
 			'database'   => '',
 			'persistent' => false,
 			'compress'   => false,
