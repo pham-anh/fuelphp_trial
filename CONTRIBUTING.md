@@ -42,6 +42,10 @@ $ git clone git@gitlab.com:pham-anh/payment_system.git
 
 #### Set up database
 
+Create the followings:
+
+You can start right away with the following default information.
+
 * Database: `payment_system`
 * User for app:
  * Db user: `web_user` and password: `web_user`   
@@ -49,8 +53,6 @@ $ git clone git@gitlab.com:pham-anh/payment_system.git
 * User for migrations:
  * Db user: `system_user` and password: `system_user`
 (You should grant all previlliges for `system_user` on db `payment_system`)
-
-This is default information of this project, if you want to use something other, please configure also information in this file: `fuel/app/config/development/db.php`
 
 #### Install dependencies
 
@@ -64,3 +66,19 @@ $ php composer.phar install # This will install the dependencies of FuelPHP so t
 ```
 
 #### Run migration to create/ update tables/ columns
+
+Open XAMPP shell, change to `payment_system` project, run this command:
+
+```shell
+php oil refine migrate
+``
+
+Then you will have the latest database for this system.
+
+#### Access the system via browser
+
+URL: `localhost/payment_system/public`
+
+---
+
+_(To be edited anytime...)_
