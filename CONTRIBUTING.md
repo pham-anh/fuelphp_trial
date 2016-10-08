@@ -73,8 +73,9 @@ Then you will have the latest database for this system.
 
 #### Access the system via browser
 
-URL: `localhost/payment_system/public`
+* `http://localhost/payment_system/public/account/index`
 
+* `http://localhost/payment_system/public/account/index`
 ---
 
 _(To be edited anytime...)_
