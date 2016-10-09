@@ -8,7 +8,7 @@ class Create_payment_orders
 	{
 		\DBUtil::create_table('payment_orders', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
-			'beneficiary' => array('constraint' => 11, 'type' => 'int'),
+			'beneficiary' => array('constraint' => 11, 'type' => 'int', 'unsigned' => true),
 			'amount' => array('type' => 'double'),
 			'amnt_in_words' => array('constraint' => 255, 'type' => 'varchar'),
 			'details' => array('constraint' => 255, 'type' => 'varchar'),
