@@ -18,7 +18,18 @@ class Create_payment_orders
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
-		), array('id'));
+		), array('id'), true, false, null, array(
+			array(
+				'constraint' => 'payment_order_account',
+				'key' => 'beneficiary',
+				'reference' => array(
+					'table' => 'accounts',
+					'column' => 'id',
+				),
+				'on_update' => 'CASCADE',
+				'on_delete' => 'RESTRICT',
+			)
+		));
 	}
 
 	public function down()
