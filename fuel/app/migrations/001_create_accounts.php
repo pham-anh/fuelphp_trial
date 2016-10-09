@@ -16,6 +16,8 @@ class Create_accounts
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
 		), array('id'));
+
+		\DBUtil::create_index('accounts', 'account_no', '', 'unique');
 	}
 
 	public function down()
