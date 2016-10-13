@@ -12,7 +12,7 @@ class Create_payment_orders
 			'amount' => array('type' => 'double', 'unsigned' => true),
 			'amnt_in_words' => array('constraint' => 255, 'type' => 'varchar'),
 			'details' => array('constraint' => 255, 'type' => 'varchar'),
-			'deadline' => array('constraint' => 11, 'type' => 'int'),
+			'deadline' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'payment_request' => array('constraint' => 255, 'type' => 'varchar'),
 			'status' => array('type' => 'tinyint'),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
