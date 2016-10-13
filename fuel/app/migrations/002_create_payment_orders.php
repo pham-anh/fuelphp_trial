@@ -14,7 +14,7 @@ class Create_payment_orders
 			'details' => array('constraint' => 255, 'type' => 'varchar'),
 			'deadline' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'payment_request' => array('constraint' => 255, 'type' => 'varchar', 'null' => true),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('constraint' => '"new","approved","paid"', 'type' => 'enum'),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
