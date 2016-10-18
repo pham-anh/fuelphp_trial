@@ -81,10 +81,7 @@ class Controller_Account extends Controller
 			}
 		}
 
-		$this->template->set_global('account', $account, false);
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/edit');
-
+		return Response::forge(Presenter::forge('account/edit', 'view', null, 'template'));
 	}
 
 	public function action_delete($id = null)

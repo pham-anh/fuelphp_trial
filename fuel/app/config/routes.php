@@ -5,4 +5,5 @@ return array(
 	
 	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
 	'account/view/:id' => 'account/view/$1',
+	'account/edit/:id' => 'account/edit/$1',
 );
