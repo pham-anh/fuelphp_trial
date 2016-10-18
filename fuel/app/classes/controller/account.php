@@ -45,9 +45,7 @@ class Controller_Account extends Controller
 			}
 		}
 
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/create');
-
+		return Response::forge(Presenter::forge('account/create', 'view', null, 'template'));
 	}
 
 	public function action_edit($id = null)
