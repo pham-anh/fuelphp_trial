@@ -11,11 +11,7 @@ class Controller_Account extends Controller
 	{
 		is_null($id) and Response::redirect('account');
 
-		$data['account'] = Model_Account::find_by_pk($id);
-
-		$this->template->title = "Account";
-		$this->template->content = View::forge('account/view', $data);
-
+		return Response::forge(Presenter::forge('account/view', 'view', null, 'template'));
 	}
 
 	public function action_create()
