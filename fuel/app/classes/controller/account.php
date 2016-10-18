@@ -4,10 +4,7 @@ class Controller_Account extends Controller
 
 	public function action_index()
 	{
-		$data['accounts'] = Model_Account::find_all();
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/index', $data);
-
+		return Response::forge(Presenter::forge('account/index', 'view', null, 'template'));
 	}
 
 	public function action_view($id = null)
