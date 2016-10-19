@@ -1,5 +1,5 @@
 <?php
-class Controller_Payment_Order extends Controller_Template
+class Controller_Payment_Order extends Controller
 {
 
 	public function action_index()
