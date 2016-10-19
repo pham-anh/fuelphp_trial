@@ -48,9 +48,7 @@ class Controller_Payment_Order extends Controller
 			}
 		}
 
-		$this->template->title = "Payment_Orders";
-		$this->template->content = View::forge('payment/order/create');
-
+		return Response::forge(Presenter::forge('payment/order/create', 'view', false, 'template'));
 	}
 
 	public function action_edit($id = null)
