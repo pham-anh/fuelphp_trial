@@ -3,7 +3,7 @@
 /**
  * The payment order view presenter
  *
- * @package App
+ * @package app
  * @extends Presenter
  */
 class Presenter_Payment_Order_View extends Presenter
