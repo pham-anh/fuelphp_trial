@@ -4,10 +4,7 @@ class Controller_Payment_Order extends Controller
 
 	public function action_index()
 	{
-		$data['payment_orders'] = Model_Payment_Order::find_all();
-		$this->template->title = "Payment_orders";
-		$this->template->content = View::forge('payment/order/index', $data);
-
+		return Response::forge(Presenter::forge('payment/order/index', 'view', false, 'template'));
 	}
 
 	public function action_view($id = null)
