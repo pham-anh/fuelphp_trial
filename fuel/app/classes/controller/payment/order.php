@@ -11,11 +11,7 @@ class Controller_Payment_Order extends Controller
 	{
 		is_null($id) and Response::redirect('payment/order');
 
-		$data['payment_order'] = Model_Payment_Order::find_by_pk($id);
-
-		$this->template->title = "Payment_order";
-		$this->template->content = View::forge('payment/order/view', $data);
-
+		return Response::forge(Presenter::forge('payment/order/view', 'view', false, 'template'));
 	}
 
 	public function action_create()
