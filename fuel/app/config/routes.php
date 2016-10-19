@@ -7,4 +7,5 @@ return array(
 	'account/view/:id' => 'account/view/$1',
 	'account/edit/:id' => 'account/edit/$1',
 	'payment/order/view/:id' => 'payment/order/view/$1',
+	'payment/order/edit/:id' => 'payment/order/edit/$1',
 );

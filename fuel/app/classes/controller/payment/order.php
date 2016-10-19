@@ -87,10 +87,7 @@ class Controller_Payment_Order extends Controller
 			}
 		}
 
-		$this->template->set_global('payment_order', $payment_order, false);
-		$this->template->title = "Payment_orders";
-		$this->template->content = View::forge('payment/order/edit');
-
+		return Response::forge(Presenter::forge('payment/order/edit', 'view', false, 'template'));
 	}
 
 	public function action_delete($id = null)
