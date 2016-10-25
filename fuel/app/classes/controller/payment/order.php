@@ -4,14 +4,14 @@ class Controller_Payment_Order extends Controller
 
 	public function action_index()
 	{
-		return Response::forge(Presenter::forge('payment/order/index', 'view', false, 'template'));
+		return Response::forge(Presenter::forge('payment/order/index', 'view', null, 'template'));
 	}
 
 	public function action_view($id = null)
 	{
 		is_null($id) and Response::redirect('payment/order');
 
-		return Response::forge(Presenter::forge('payment/order/view', 'view', false, 'template'));
+		return Response::forge(Presenter::forge('payment/order/view', 'view', null, 'template'));
 	}
 
 	public function action_create()
@@ -48,7 +48,7 @@ class Controller_Payment_Order extends Controller
 			}
 		}
 
-		return Response::forge(Presenter::forge('payment/order/create', 'view', false, 'template'));
+		return Response::forge(Presenter::forge('payment/order/create', 'view', null, 'template'));
 	}
 
 	public function action_edit($id = null)
@@ -87,7 +87,7 @@ class Controller_Payment_Order extends Controller
 			}
 		}
 
-		return Response::forge(Presenter::forge('payment/order/edit', 'view', false, 'template'));
+		return Response::forge(Presenter::forge('payment/order/edit', 'view', null, 'template'));
 	}
 
 	public function action_delete($id = null)
