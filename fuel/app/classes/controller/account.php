@@ -1,24 +1,17 @@
 <?php
-class Controller_Account extends Controller_Template
+class Controller_Account extends Controller
 {
 
 	public function action_index()
 	{
-		$data['accounts'] = Model_Account::find_all();
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/index', $data);
-
+		return Response::forge(Presenter::forge('account/index', 'view', null, 'template'));
 	}
 
 	public function action_view($id = null)
 	{
 		is_null($id) and Response::redirect('account');
 
-		$data['account'] = Model_Account::find_by_pk($id);
-
-		$this->template->title = "Account";
-		$this->template->content = View::forge('account/view', $data);
-
+		return Response::forge(Presenter::forge('account/view', 'view', null, 'template'));
 	}
 
 	public function action_create()
@@ -52,9 +45,7 @@ class Controller_Account extends Controller_Template
 			}
 		}
 
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/create');
-
+		return Response::forge(Presenter::forge('account/create', 'view', null, 'template'));
 	}
 
 	public function action_edit($id = null)
@@ -90,10 +81,7 @@ class Controller_Account extends Controller_Template
 			}
 		}
 
-		$this->template->set_global('account', $account, false);
-		$this->template->title = "Accounts";
-		$this->template->content = View::forge('account/edit');
-
+		return Response::forge(Presenter::forge('account/edit', 'view', null, 'template'));
 	}
 
 	public function action_delete($id = null)

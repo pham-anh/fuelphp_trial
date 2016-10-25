@@ -1,24 +1,17 @@
 <?php
-class Controller_Payment_Order extends Controller_Template
+class Controller_Payment_Order extends Controller
 {
 
 	public function action_index()
 	{
-		$data['payment_orders'] = Model_Payment_Order::find_all();
-		$this->template->title = "Payment_orders";
-		$this->template->content = View::forge('payment/order/index', $data);
-
+		return Response::forge(Presenter::forge('payment/order/index', 'view', null, 'template'));
 	}
 
 	public function action_view($id = null)
 	{
 		is_null($id) and Response::redirect('payment/order');
 
-		$data['payment_order'] = Model_Payment_Order::find_by_pk($id);
-
-		$this->template->title = "Payment_order";
-		$this->template->content = View::forge('payment/order/view', $data);
-
+		return Response::forge(Presenter::forge('payment/order/view', 'view', null, 'template'));
 	}
 
 	public function action_create()
@@ -55,9 +48,7 @@ class Controller_Payment_Order extends Controller_Template
 			}
 		}
 
-		$this->template->title = "Payment_Orders";
-		$this->template->content = View::forge('payment/order/create');
-
+		return Response::forge(Presenter::forge('payment/order/create', 'view', null, 'template'));
 	}
 
 	public function action_edit($id = null)
@@ -96,10 +87,7 @@ class Controller_Payment_Order extends Controller_Template
 			}
 		}
 
-		$this->template->set_global('payment_order', $payment_order, false);
-		$this->template->title = "Payment_orders";
-		$this->template->content = View::forge('payment/order/edit');
-
+		return Response::forge(Presenter::forge('payment/order/edit', 'view', null, 'template'));
 	}
 
 	public function action_delete($id = null)

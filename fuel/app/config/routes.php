@@ -4,4 +4,8 @@ return array(
 	'_404_'   => 'welcome/404',    // The main 404 route
 	
 	'hello(/:name)?' => array('welcome/hello', 'name' => 'hello'),
+	'account/view/:id' => 'account/view/$1',
+	'account/edit/:id' => 'account/edit/$1',
+	'payment/order/view/:id' => 'payment/order/view/$1',
+	'payment/order/edit/:id' => 'payment/order/edit/$1',
 );
