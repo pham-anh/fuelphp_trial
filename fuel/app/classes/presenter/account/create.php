@@ -18,6 +18,7 @@ class Presenter_Account_Create extends Presenter
 	public function view()
 	{
 		$this->title = 'Accounts';
+		$this->subtitle = 'New Account';
 		$this->content = View::forge('account/create');
 	}
 
