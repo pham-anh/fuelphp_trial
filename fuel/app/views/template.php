@@ -4,14 +4,18 @@
 	<meta charset="utf-8">
 	<title><?php echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
+	<?php echo Asset::css('stylesheet.css'); ?>
 	<style>
 		body { margin: 40px; }
 	</style>
 </head>
 <body>
+	<h1 class="text-center">Payment System</h1>
+	<hr>
 	<div class="container">
+
 		<div class="col-md-12">
-			<h1><?php echo $title; ?></h1>
+			<h2><?php echo $subtitle; ?>...</h2>
 			<hr>
 <?php if (Session::get_flash('success')): ?>
 			<div class="alert alert-success">
