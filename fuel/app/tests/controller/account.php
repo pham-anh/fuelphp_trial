@@ -6,7 +6,7 @@
 class Test_Controller_Account extends TestCase
 {
 
-	public function test_acction_create_returns_presenter()
+	public function test_action_create_returns_presenter()
 	{
 		$response = Request::forge('account/create')->execute()->response();
 
