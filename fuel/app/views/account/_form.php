@@ -31,7 +31,7 @@
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>
 		</div>
 		<div class="form-group col-sm-3">
-			<?php echo Html::anchor('account', 'Cancel', array('class' => 'btn btn-default')); ?>
+			<?php echo Html::anchor('account/index', 'Cancel', array('class' => 'btn btn-default')); ?>
 		</div>
 </fieldset>
 <?php echo Form::close(); ?>
