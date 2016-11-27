@@ -18,6 +18,7 @@ class Presenter_Account_Index extends Presenter
 	public function view()
 	{
 		$this->title = 'Accounts';
+		$this->subtitle = 'Listing Accounts';
 		$this->content = View::forge('account/index', array('accounts' => Model_Account::find_all()));
 	}
 

@@ -7,7 +7,7 @@ class Model_Account extends Model_Crud
 	{
 		$val = Validation::forge($factory);
 		$val->add_field('account_name', 'Account Name', 'required|max_length[255]');
-		$val->add_field('account_no', 'Account No', 'required|max_length[255]');
+		$val->add_field('account_no', 'Account Number', 'required|max_length[255]');
 		$val->add_field('bank', 'Bank', 'required|max_length[255]');
 		$val->add_field('province', 'Province', 'required|max_length[255]');
 

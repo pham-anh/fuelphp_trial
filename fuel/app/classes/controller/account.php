@@ -32,7 +32,7 @@ class Controller_Account extends Controller
 				if ($account and $account->save())
 				{
 					Session::set_flash('success', 'Added account #'.$account->id.'.');
-					Response::redirect('account');
+					Response::redirect('account/index');
 				}
 				else
 				{
