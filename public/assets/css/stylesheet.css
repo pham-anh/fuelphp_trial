@@ -17,3 +17,7 @@ body, h1, h2{
   margin-left: auto;
   margin-right: auto;
 }
+
+.form-group>span{
+    color: #b94a48;
+}
