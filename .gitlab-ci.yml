@@ -20,4 +20,4 @@ variables:
 
 test:app:
   script:
-  - php oil test --debug
+  - php oil test --group=App --debug
