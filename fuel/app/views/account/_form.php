@@ -10,13 +10,13 @@
 		<span><?php echo (isset($error_message['account_name']) ? $error_message['account_name'] : '') ?></span>
 	</div>
 	<div class="form-group col-sm-6">
-		<?php echo Form::label('Account no', 'account_no', array('class' => 'control-label col-sm-4')); ?>
+		<?php echo Form::label('Account number', 'account_no', array('class' => 'control-label')); ?>
 		
 		<?php echo Form::input('account_no', Input::post('account_no', isset($account) ? $account->account_no : ''), array('class' => 'form-control', 'placeholder' => 'Account no')); ?>
 		<span><?php echo (isset($error_message['account_no']) ? $error_message['account_no'] : '') ?></span>
 	</div>
 	<div class="form-group col-sm-6">
-		<?php echo Form::label('Bank', 'bank', array('class' => 'control-label text-overflow')); ?>
+		<?php echo Form::label('Bank', 'bank', array('class' => 'control-label')); ?>
 
 		<?php echo Form::input('bank', Input::post('bank', isset($account) ? $account->bank : ''), array('class' => 'form-control', 'placeholder' => 'Bank', '')); ?>
 		<span><?php echo (isset($error_message['bank']) ? $error_message['bank'] : '') ?></span>
