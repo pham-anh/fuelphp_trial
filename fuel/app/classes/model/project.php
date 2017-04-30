@@ -21,6 +21,16 @@ class Model_Project extends Model
 		),
 	);
 
+	protected static $_has_many = array(
+		'tasks' => array(
+			'model_to' => 'Model_Task',
+			'key_from' => 'id',
+			'key_to' => 'project_id',
+			'cascade_save' => true,
+			'cascade_delete' => false,
+		)
+	);
+
 	public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
