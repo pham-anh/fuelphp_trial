@@ -20,6 +20,39 @@ class Controller_Project extends Controller_Template
 			Response::redirect('project');
 		}
 
+		// checking first if we recieved a POST request
+		if (Input::method() == 'POST')
+		{
+			// getting the task name. if empty, dispplay an
+			// error, otherwise we attempt to create the new task
+			$task_name = Input::post('task_name', '');
+			if($task_name == '')
+			{
+				//setting the flash session variable named
+				// error. Reminder: this var is displayed in
+				// the template using Session::get_flash
+				Session::set_flash(
+					'error',
+					'The task name is empty!'
+				);
+			}
+			else
+			{
+				$task = Model_Task::forge();
+				$task->name = $task_name;
+				$task->status = 0;
+				$task->rank = 0; // temporary
+				$data['project']->tasks[] = $task;
+				$data['project']->save();
+
+				// when the task has been saved, we direct
+				// the browser to the same webpage. This
+				// prevent the form from being submitted again
+				// if the user refreshes the webpage
+				Response::redirect('project/view/'.$id);
+			}
+		}
+
 		$this->template->title = "Project";
 		$this->template->content = View::forge('project/view', $data);
 
@@ -123,6 +156,18 @@ class Controller_Project extends Controller_Template
 		}
 
 		Response::redirect('project');
+
+	}
+
+	public function action_change_task_status()
+	{
+		if (Input::is_ajax())
+		{
+			$task = Model_Task::find(intval(Input::post('task_id')));
+			$task->status = intval(Input::post('new_status'));
+			$task->save();
+		}
+		return false;
 
 	}
 
