@@ -7,6 +7,18 @@
 	<style>
 		body { margin: 40px; }
 	</style>
+	<script type="text/javascript">
+	<?php
+	echo 'var uriBase = '.Format::forge(Uri::base())->to_json().';';
+	?>
+	</script>
+	<?php
+	echo Asset::js(array(
+		'http://code.jquery.com/jquery-1.11.2.min.js',
+		'http://code.jquery.com/ui/1.11.2/jquery-ui.min.js',
+		'website.js'
+	));
+	?>
 </head>
 <body>
 	<div class="container">
